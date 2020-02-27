@@ -25,10 +25,27 @@ def gross_for_director(d)
 end
 
 def list_of_directors(source)
-  # Write this implementation
+  names = []
+  index = 0 
+  while index < source.size do
+    names << source[index][:name]
+    index += 1
+  end
+  names
 end
 
 def total_gross(source)
+  
+  total = 0 
+  directors_totals(source).each_value do | value | 
+    total += value
+  end
+  total
+  
+end
+
+## QUESTIONS | "total_gross" Assignment
+
   # Write this implementation
   #
   # Should use methods:
@@ -38,6 +55,5 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
-end
 
-
+  ## Unclear as to the assignment's objectives; I successfully created this method without reference to "list_of_directors". So, what's the point of it?
